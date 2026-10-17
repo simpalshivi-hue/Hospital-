@@ -1,0 +1,6 @@
+{
+  "name": "SHUBHDEEP HOSPITAL - Interactive Tour & Booking",
+  "description": "SHUBHDEEP HOSPITAL (शुभदीप हॉस्पिटल), Bilhaur, Kanpur - Interactive Image-Hotspot Virtual Tour, Doctor Appointments, Department Charges, and 24x7 Emergency Booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

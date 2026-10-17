@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHUBHDEEP HOSPITAL - Interactive Tour & Booking</title>
+    <meta name="description" content="SHUBHDEEP HOSPITAL (शुभदीप हॉस्पिटल), Bilhaur, Kanpur - Interactive Image-Hotspot Virtual Tour, Doctor Appointments, Department Charges, and 24x7 Emergency Booking." />
+    <meta property="og:title" content="SHUBHDEEP HOSPITAL - Interactive Tour & Booking" />
+    <meta property="og:description" content="SHUBHDEEP HOSPITAL (शुभदीप हॉस्पिटल), Bilhaur, Kanpur - Interactive Image-Hotspot Virtual Tour, Doctor Appointments, Department Charges, and 24x7 Emergency Booking." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Fallback Embedded Custom CSS Styles (100% Self-Contained to Prevent Any Styling Breakage) -->
+    <style>
+      :root {
+        --color-primary: #0d9488;
+        --color-primary-dark: #0f766e;
+        --color-accent-amber: #d97706;
+        --color-bg-dark: #020617;
+        --color-card-bg: #ffffff;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html, body {
+        width: 100%;
+        min-height: 100%;
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: #f8fafc;
+        color: #0f172a;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+
+      /* Custom pulse and glow keyframes */
+      @keyframes pulseGlow {
+        0%, 100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.7);
+        }
+        50% {
+          transform: scale(1.05);
+          box-shadow: 0 0 0 14px rgba(20, 184, 166, 0);
+        }
+      }
+      @keyframes radarPing {
+        0% {
+          transform: scale(0.95);
+          opacity: 0.8;
+        }
+        100% {
+          transform: scale(2.2);
+          opacity: 0;
+        }
+      }
+      .hotspot-pulse {
+        animation: pulseGlow 2s infinite ease-in-out;
+      }
+      .radar-wave {
+        animation: radarPing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+
+      /* Glassmorphism fallback utility */
+      .glass-modal {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+      }
+      .glass-card-dark {
+        background: rgba(2, 6, 23, 0.92);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      /* Comprehensive Core Layout & Flexbox/Grid Fallbacks */
+      header {
+        width: 100%;
+        display: block;
+      }
+      button, a {
+        cursor: pointer;
+        text-decoration: none;
+      }
+      input, select, textarea {
+        font-family: inherit;
+      }
+
+      /* Scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-teal-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
